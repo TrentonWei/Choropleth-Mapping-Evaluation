@@ -1,0 +1,170 @@
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\bin\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\bin\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+G:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\bin\Debug\MapAssign.exe
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\bin\Debug\MapAssign.pdb
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+C:\Users\Administrator\Desktop\汉阳图集\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\MapAssign\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\Users\Administrator\Desktop\MapAssign\MapAssign\obj\x86\Debug\MapAssign.pdb
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.exe
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.pdb
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\bin\Debug\MapAssign.exe
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\bin\Debug\MapAssign.pdb
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+M:\汉阳区地名图集设计与编制\MapAssign\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+I:\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+I:\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+I:\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+I:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+I:\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+I:\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+I:\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+I:\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+I:\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.v4.0.dll
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.v4.0.dll
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+I:\汉阳制图项目\数据预处理\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.v4.0.dll
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+I:\汉阳制图项目\数据预处理\10.2工程\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.v4.0.dll
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+C:\Users\Administrator\Desktop\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.dll
+G:\汉阳区地名图集设计与编制\MapAssignForapplication\MapAssign\bin\Debug\ESRI.ArcGIS.Desktop.AddIns.v4.0.dll
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.exe
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.pdb
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+J:\MapAssignForapplication\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+J:\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.exe
+J:\MapAssignForapplication\MapAssign\bin\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\bin\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\bin\Debug\MapAssign.pdb
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.exe
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.pdb
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\bin\Debug\MapAssign.exe
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\bin\Debug\MapAssign.pdb
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+J:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.exe
+G:\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\bin\Debug\MapAssign.exe
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\bin\Debug\MapAssign.pdb
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.csproj.ResolveComReference.cache
+C:\WorkFiles\汉阳区地名图集设计与编制\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\AxInterop.esriControls.dll
+C:\WorkFiles\06 代码集合\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.csproj.ResolveComReference.cache
+C:\WorkFiles\06 代码集合\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\WorkFiles\06 代码集合\MapAssignForapplication 10.0 5.3\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.csproj.ResolveComReference.cache
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.exe
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.pdb
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\bin\Debug\MapAssign.exe
+C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\bin\Debug\MapAssign.pdb
