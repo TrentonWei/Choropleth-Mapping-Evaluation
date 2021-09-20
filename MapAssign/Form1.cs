@@ -36,7 +36,11 @@ namespace MapAssign
         DataTable table;//Time series data
         #endregion
 
-        #region remove the layer
+        /// <summary>
+        /// remove the layer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 移除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -56,9 +60,12 @@ namespace MapAssign
                 return;
             }
         }
-        #endregion
 
-        #region Click to remove the layer
+        /// <summary>
+        /// Click to remove the layer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void axTOCControl1_OnMouseDown(object sender, ITOCControlEvents_OnMouseDownEvent e)
         {
             if (axMapControl1.LayerCount > 0)
@@ -77,9 +84,12 @@ namespace MapAssign
                 this.contextMenuStrip1.Show(axTOCControl1, e.x, e.y);
             }
         }
-        #endregion
      
-        #region load initialize
+        /// <summary>
+        /// load initialize
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             IMap pMap = axMapControl1.Map;
@@ -110,9 +120,12 @@ namespace MapAssign
                 this.comboBox1.SelectedIndex = 0;
             }
         }
-        #endregion
 
-        #region OutPut
+        /// <summary>
+        /// OutPut
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.comboBox2.Items.Clear();
@@ -133,16 +146,22 @@ namespace MapAssign
 
             this.comboBox2.Text = localFilePath;
         }
-        #endregion
 
-        #region Implement
+        /// <summary>
+        /// Implement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
            
         }
-        #endregion
 
-        #region refresh the layers of polygon data
+        /// <summary>
+        /// refresh the layers of polygon data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_Click(object sender, EventArgs e)
         {
              this.comboBox1.Items.Clear();
@@ -174,7 +193,6 @@ namespace MapAssign
                  this.comboBox1.SelectedIndex = 0;
              }
         }
-        #endregion
 
         /// <summary>
         /// Time series data read
@@ -227,11 +245,14 @@ namespace MapAssign
             #region GetTheFields
             this.comboBox5.Items.Clear();//Clear the items
 
-            for (int i = 0; i < table.Rows.Count; i++)
+            //DataColumn FirstColumn = table.Columns[0];
+            //DataRow FirstRow = table.Rows[0];
+            for (int i = 0; i < table.Columns.Count; i++)
             {
-                if (!String.IsNullOrEmpty(table.Rows[i][0].ToString()))
+                if (!String.IsNullOrEmpty(table.Columns[i].Caption))
                 {
-                    this.comboBox5.Items.Add(table.Rows[i][0].ToString());
+                    this.comboBox5.Items.Add(table.Columns[i].Caption.ToString());
+                    this.comboBox6.Items.Add(table.Columns[i].Caption.ToString());
                 }
             }
 
@@ -248,6 +269,11 @@ namespace MapAssign
 
                 this.comboBox5.SelectedIndex = 0;
             }
+
+            if (this.comboBox6.Items.Count > 0)
+            {
+                this.comboBox6.SelectedIndex = 0;
+            }
             #endregion
         }
 
@@ -256,7 +282,7 @@ namespace MapAssign
         /// </summary>
         /// <param name="Name"></param>
         /// <returns></returns>
-        public Dictionary<string,IPolygon> GetNamePolygon(String Name)
+        public Dictionary<string,IPolygon> GetNamePolygon(String MatchName)
         {
             Dictionary<string, IPolygon> NamePolygon = new Dictionary<string, IPolygon>();
 
@@ -269,7 +295,7 @@ namespace MapAssign
             while (pFeature != null)
             {
                 IFields pFields = pFeature.Fields;
-                int field1 = pFields.FindField(Name);
+                int field1 = pFields.FindField(MatchName);
                 String NameValue = Convert.ToString(pFeature.get_Value(field1));
 
                 if (!NamePolygon.ContainsKey(NameValue))
@@ -286,14 +312,31 @@ namespace MapAssign
             return NamePolygon;
         }
 
-
-        public Dictionary<string, List<double>> GetNameTimeSeries(String Name)
+        /// <summary>
+        /// 获取每个Name对应下的TimeValues
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public Dictionary<string, List<double>> GetNameTimeSeries(String MatchName,string ValueName)
         {
             Dictionary<string, List<double>> NameTimeSeries = new Dictionary<string, List<double>>();
 
             #region MainProcess
-            
+            foreach (DataRow dr in table.Rows)
+            {
+                string Name = dr[MatchName].ToString();
+                double Value = Convert.ToDouble(dr[ValueName]);
 
+                if (!NameTimeSeries.ContainsKey(Name))
+                {
+                    List<double> ValueList = new List<double>();
+                    ValueList.Add(Value);
+                }
+                else
+                {
+                    NameTimeSeries[Name].Add(Value);
+                }
+            }
 
             #endregion
 
