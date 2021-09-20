@@ -5,3 +5,5 @@
 (1) Classification evaluation see MapAssign.
 
 (2) As for the classification for choropleth，see mapclassify-master，refer to: https://github.com/pysal/mapclassify. Many thanks for their open source code.
+
+
