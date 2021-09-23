@@ -50,7 +50,7 @@ namespace MapAssign.PuTools
         }
 
         /// <summary>
-        /// Compute TimeLocalMoranI
+        /// Compute TimeLocalMoranI for TargetTime
         /// </summary>
         /// <param name="TimeValue"></param>
         /// <param name="TargetTime"></param>
@@ -107,7 +107,7 @@ namespace MapAssign.PuTools
         /// </summary>
         /// <param name="TimeValue"></param>
         /// <returns></returns>
-        public double GlobalMoranI(Dictionary<int, double> TimeValue)
+        public double GlobalTimeMoranI(Dictionary<int, double> TimeValue)
         {
             double GlobalMoranI = 0;
 
@@ -121,10 +121,10 @@ namespace MapAssign.PuTools
                 List<double> TimeWeight = this.GetTimeWeigth(TimeValue.Values.ToList(), i);//Get TimeWeight
                 for (int j = 0; j < TimeList.Count; j++)
                 {
-                    Z = TimeWeight[j] * (TimeValue[i] - Ave) * (TimeValue[j] - Ave);
+                    Z = Z + TimeWeight[j] * (TimeValue[i] - Ave) * (TimeValue[j] - Ave);
                 }
 
-                S = (TimeValue[i] - Ave) * (TimeValue[i] - Ave);
+                S = S + (TimeValue[i] - Ave) * (TimeValue[i] - Ave);
             }
             #endregion
 
@@ -436,11 +436,45 @@ namespace MapAssign.PuTools
 
             for (int i = 0; i < FreList.Count; i++)
             {
-                CEntroy = CEntroy - FreList[i] * Math.Log(2, FreList[i]);
+                if (FreList[i] != 1.0 && FreList[i] != 0)
+                {
+                    CEntroy = CEntroy - FreList[i] * Math.Log(2, FreList[i]);
+                }
             }
 
             return CEntroy;
         }
+
+        /// <summary>
+        /// Compute the class Entroy
+        /// </summary>
+        /// <param name="FreList"></param>frequency for each class
+        /// <returns></returns>
+        public double ClassEntroy(List<int> ClassList)
+        {
+            List<int> SingleClass = ClassList.Distinct().ToList();
+            List<double> FreList = new List<double>();
+
+            #region GetFreList
+            for (int i = 0; i < SingleClass.Count; i++)
+            {
+                int Count = 0;
+                for (int j = 0; j < ClassList.Count; j++)
+                {
+                    if (ClassList[j] == SingleClass[i])
+                    {
+                        Count++;
+                    }
+                }
+
+                double Fre = (double)Count / ClassList.Count;//Int/Int may a Int
+                FreList.Add(Fre);
+            }
+            #endregion
+
+            return this.ClassEntroy(FreList);
+        }
+
 
         /// <summary>
         /// Compute the metric entroy of a map (ClassEntroy)
@@ -475,13 +509,16 @@ namespace MapAssign.PuTools
                 }
 
                 double SumClassArea=this.GetSumArea(ClassPolygon);
-                MMEntroy = MMEntroy - SumClassArea / SumArea * Math.Log(2, SumClassArea / SumArea);
+
+                if (SumClassArea / SumArea != 1 && SumClassArea / SumArea != 0)
+                {
+                    MMEntroy = MMEntroy - SumClassArea / SumArea * Math.Log(2, SumClassArea / SumArea);
+                }
             }
             #endregion
 
             return MMEntroy;
         }
-
 
         /// <summary>
         /// Compute the metric entroy of a map (UnitClassEntroy)
@@ -495,12 +532,12 @@ namespace MapAssign.PuTools
             #region MapMetricEntroy
             double SumArea = this.GetSumArea(PolygonValue.Keys.ToList());
 
-
             foreach (KeyValuePair<IPolygon, int> kv in PolygonValue)
             {
                 IPolygon pPolygon = kv.Key;
                 IArea pArea = pPolygon as IArea;
                 double Area = pArea.Area;
+                double CacheEntroy = Area / SumArea * Math.Log(2, Area / SumArea);
                 MMEntroy = MMEntroy - Area / SumArea * Math.Log(2, Area / SumArea);
             }
 
@@ -560,6 +597,7 @@ namespace MapAssign.PuTools
                             Count++;
                         }
                     }
+
                     ClassCount.Add(j, Count);
                 }
                 #endregion
@@ -567,7 +605,11 @@ namespace MapAssign.PuTools
                 #region Computation
                 foreach (KeyValuePair<int, int> ckv in ClassCount)
                 {
-                    MTEntroy = MTEntroy - ckv.Value / TouchCount * Math.Log(2, ckv.Value / TouchCount);
+                    double Fre = (double)ckv.Value / TouchCount;//Int/Int may a Int
+                    if (Fre != 1.0 && Fre != 0)
+                    {
+                        MTEntroy = MTEntroy - Fre * Math.Log(2, Fre);
+                    }
                 }
                 #endregion
             }

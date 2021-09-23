@@ -1,0 +1,11 @@
+Application
+(1) The code include environment (Get in the file location, do as the readme)
+conda-env create -f environment.yml; This need to cd to the file path of env
+
+(2) conda activate mapclassify
+conda remove -n mapclassify mapclassify
+This need to cd to the file path of built env
+
+(3) pip install -e .; This need to cd to the file path for setup
+
+(4) Add package for python:use conda package manager
