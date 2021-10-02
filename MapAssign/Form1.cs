@@ -400,28 +400,33 @@ namespace MapAssign
             Dictionary<int,double> ClassEntroyDic = new Dictionary<int,double>();//Dic for ClassEntroy
             Dictionary<int,double> MetricEntroyDic = new Dictionary<int,double>();//Dic for MetricEntroy
             Dictionary<int,double> ThematicEntroyDic = new Dictionary<int,double>();//Dic for ThematicEntroy
+            Dictionary<int, double> MixEntroyDic = new Dictionary<int, double>();//Dic for MixedEntroy
 
             PuTools.EvaPara EP = new PuTools.EvaPara();
             for (int i = 0; i < TargetTimeValueSeries.Count; i++)
             {
-                double ClassEntroy = EP.ClassEntroy(TargetTimeValueSeries[i].Values.ToList());
-                double MetricEntroy = EP.MapMetricEntroy1(TargetTimeValueSeries[i]);
-                double ThematicEntroy = EP.MapThematicEntroy(TargetTimeValueSeries[i]);
+                double ClassEntroy = EP.ClassEntroy(TargetTimeValueSeries[i].Values.ToList(), 2);
+                double MetricEntroy = EP.MapMetricEntroy1(TargetTimeValueSeries[i],2);
+                double ThematicEntroy = EP.MapThematicEntroy(TargetTimeValueSeries[i], 2) / TargetTimeValueSeries[i].Values.Count;
+                double MixEntroy = ClassEntroy * 0.4 + MetricEntroy * 0.4 + ThematicEntroy * 0.2;
 
                 ClassEntroyDic.Add(i,ClassEntroy);
                 MetricEntroyDic.Add(i,MetricEntroy);
                 ThematicEntroyDic.Add(i,ThematicEntroy);
+                MixEntroyDic.Add(i, MixEntroy);
             }
             #endregion
 
             #region 计算信息量的稳定性
-            double ClassEntroyChange = EP.GlobalTimeMoranI(ClassEntroyDic);
-            double MetricEntroyChange = EP.GlobalTimeMoranI(MetricEntroyDic);
-            double ThematicEntroyChange = EP.GlobalTimeMoranI(ThematicEntroyDic);
+            double ClassEntroyChange = EP.GlobalTimeMoranI(ClassEntroyDic, 3, 12, 0.9, 0.1);
+            double MetricEntroyChange = EP.GlobalTimeMoranI(MetricEntroyDic, 3, 12, 0.9, 0.1);
+            double ThematicEntroyChange = EP.GlobalTimeMoranI(ThematicEntroyDic, 3, 12, 0.9, 0.1);
+            double MixEntroyChange = EP.GlobalTimeMoranI(MixEntroyDic, 3, 12, 0.9, 0.1);
 
-            List<double> LocalClassEntroyChange = EP.TimeLocalMoranIList(ClassEntroyDic);
-            List<double> LocalMetricEntroyChange = EP.TimeLocalMoranIList(MetricEntroyDic);
-            List<double> LocalThematicEntroyChange = EP.TimeLocalMoranIList(ThematicEntroyDic);
+            List<double> LocalClassEntroyChange = EP.TimeLocalMoranIList(ClassEntroyDic, 3, 12, 0.9, 0.1);
+            List<double> LocalMetricEntroyChange = EP.TimeLocalMoranIList(MetricEntroyDic, 3, 12, 0.9, 0.1);
+            List<double> LocalThematicEntroyChange = EP.TimeLocalMoranIList(ThematicEntroyDic, 3, 12, 0.9, 0.1);
+            List<double> LocalMixEntroyChange = EP.TimeLocalMoranIList(MixEntroyDic, 3, 12, 0.9, 0.1);
             #endregion
 
             #region OutPut
@@ -437,6 +442,7 @@ namespace MapAssign
             sw.Write("ClassEntroyChange:" + ClassEntroyChange.ToString()); sw.Write("\r\n");
             sw.Write("MetricEntroyChange:" + MetricEntroyChange.ToString()); sw.Write("\r\n");
             sw.Write("ThematicEntroyChange:" + ThematicEntroyChange.ToString()); sw.Write("\r\n");
+            sw.Write("MixEntroyChange:" + MixEntroyChange.ToString()); sw.Write("\r\n");
 
             sw.Write("LocalClassEntroyChange:"); sw.Write("\r\n");
             for (int i = 0; i < LocalClassEntroyChange.Count; i++)
@@ -454,6 +460,36 @@ namespace MapAssign
             for (int i = 0; i < LocalThematicEntroyChange.Count; i++)
             {
                 sw.Write(LocalThematicEntroyChange[i].ToString()); sw.Write("\r\n");
+            }
+
+            sw.Write("LocalMixEntroyChange:"); sw.Write("\r\n");
+            for (int i = 0; i < LocalMixEntroyChange.Count; i++)
+            {
+                sw.Write(LocalMixEntroyChange[i].ToString()); sw.Write("\r\n");
+            }
+
+            sw.Write("ClassEntroy:"); sw.Write("\r\n");
+            for (int i = 0; i <ClassEntroyDic.Values.ToList().Count; i++)
+            {
+                sw.Write(ClassEntroyDic.Values.ToList()[i].ToString()); sw.Write("\r\n");
+            }
+
+            sw.Write("MetricEntroy:"); sw.Write("\r\n");
+            for (int i = 0; i < MetricEntroyDic.Values.ToList().Count; i++)
+            {
+                sw.Write(MetricEntroyDic.Values.ToList()[i].ToString()); sw.Write("\r\n");
+            }
+
+            sw.Write("ThematicEntroy:"); sw.Write("\r\n");
+            for (int i = 0; i < ThematicEntroyDic.Values.ToList().Count; i++)
+            {
+                sw.Write(ThematicEntroyDic.Values.ToList()[i].ToString()); sw.Write("\r\n");
+            }
+
+            sw.Write("MixEntroy:"); sw.Write("\r\n");
+            for (int i = 0; i < MixEntroyDic.Values.ToList().Count; i++)
+            {
+                sw.Write(MixEntroyDic.Values.ToList()[i].ToString()); sw.Write("\r\n");
             }
 
             sw.Close();
