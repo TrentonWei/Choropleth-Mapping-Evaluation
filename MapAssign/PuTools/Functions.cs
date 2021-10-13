@@ -211,6 +211,36 @@ namespace MapAssign.PuTools
         }
         #endregion
 
+        #region 将数据存储到字段下
+        public void DataStore(IFeatureClass pFeatureClass, IFeature pFeature, string s, double t)
+        {
+            IDataset dataset = pFeatureClass as IDataset;
+            IWorkspace workspace = dataset.Workspace;
+            IWorkspaceEdit wse = workspace as IWorkspaceEdit;
+
+            IFields pFields = pFeature.Fields;
+
+            wse.StartEditing(false);
+            wse.StartEditOperation();
+
+            int fnum;
+            fnum = pFields.FieldCount;
+
+            for (int m = 0; m < fnum; m++)
+            {
+                if (pFields.get_Field(m).Name == s)
+                {
+                    int field1 = pFields.FindField(s);
+                    pFeature.set_Value(field1, t);
+                    pFeature.Store();
+                }
+            }
+
+            wse.StopEditOperation();
+            wse.StopEditing(true);
+        }
+        #endregion
+
         #region 创建虚拟点图层
         public IFeatureLayer CreateFeatureLayerInmemeory(IMap Map, string DataSetName)
         {

@@ -54,8 +54,9 @@ namespace MapAssign.PuTools
         /// </summary>
         /// <param name="TimeValue"></param>
         /// <param name="TargetTime"></param>
+        /// selfLabel=true 考虑自身权重；selfLabel=false不考虑自身权重
         /// <returns></returns>
-        public double TimeLocalMoranI(Dictionary<int, double> TimeValue, int TargetTime,int Type,int T,double w1,double w2)
+        public double TimeLocalMoranI(Dictionary<int, double> TimeValue, int TargetTime,int Type,int T,double w1,double w2,bool selfLabel)
         {
             double LM = 0;
             List<double> ValueList = TimeValue.Values.ToList();
@@ -76,7 +77,7 @@ namespace MapAssign.PuTools
 
             else if (Type == 3)//考虑周期的高斯权重
             {
-                WeigthMatrix = this.GetGasuWeigthConsiderT(TimeValue.Values.ToList(), TargetTime, T, w1, w2);
+                WeigthMatrix = this.GetGasuWeigthConsiderT(TimeValue.Values.ToList(), TargetTime, T, w1, w2,selfLabel);
             }
             #endregion
 
@@ -101,15 +102,16 @@ namespace MapAssign.PuTools
         /// </summary>
         /// <param name="TimeValue"></param>
         /// <param name="TargetTime"></param>
+        /// selfLabel=true 考虑自身权重；selfLabel=false不考虑自身权重
         /// <returns></returns>
-        public List<double> TimeLocalMoranIList(Dictionary<int, double> TimeValue,int Type,int T,double w1,double w2)
+        public List<double> TimeLocalMoranIList(Dictionary<int, double> TimeValue,int Type,int T,double w1,double w2,bool selfLabel)
         {
             List<int> TimeList = TimeValue.Keys.ToList();
             List<double> TimeLocalMoranIList = new List<double>();
 
             for (int i = 0; i < TimeList.Count; i++)
             {
-                double LocalMoralI = this.TimeLocalMoranI(TimeValue, i, Type, T, w1, w2);
+                double LocalMoralI = this.TimeLocalMoranI(TimeValue, i, Type, T, w1, w2,selfLabel);
                 TimeLocalMoranIList.Add(LocalMoralI);
             }
 
@@ -121,14 +123,16 @@ namespace MapAssign.PuTools
         /// </summary>
         /// <param name="TimeValue"></param>
         /// Type表示权重计算考虑的情况 1普通权重；2不考虑周期的高斯权重；3考虑周期的高斯权重
+        /// selfLabel=true考虑自身权重；selfLabel=false 不考虑自身权重
         /// <returns></returns>
-        public double GlobalTimeMoranI(Dictionary<int, double> TimeValue,int Type,int T,double w1,double w2)
+        public double GlobalTimeMoranI(Dictionary<int, double> TimeValue,int Type,int T,double w1,double w2,bool selfLabel)
         {
             double GlobalMoranI = 0;
 
             #region Computation
             List<int> TimeList = TimeValue.Keys.ToList();
             double Ave=this.AveCompute(TimeValue.Values.ToList());//Ave value
+            double WeightSum = 0;
 
             double S = 0; double Z = 0;
             for (int i = 0; i < TimeList.Count; i++)
@@ -148,20 +152,21 @@ namespace MapAssign.PuTools
 
                 else if (Type == 3)
                 {
-                    TimeWeight = this.GetGasuWeigthConsiderT(TimeValue.Values.ToList(), i, T, w1, w2);
+                    TimeWeight = this.GetGasuWeigthConsiderT(TimeValue.Values.ToList(), i, T, w1, w2,selfLabel);
                 }
                 #endregion
 
                 for (int j = 0; j < TimeList.Count; j++)
                 {
                     Z = Z + TimeWeight[j] * (TimeValue[i] - Ave) * (TimeValue[j] - Ave);
+                    WeightSum = WeightSum + TimeWeight[j];
                 }
 
                 S = S + (TimeValue[i] - Ave) * (TimeValue[i] - Ave);
             }
             #endregion
 
-            GlobalMoranI = Z / S;
+            GlobalMoranI = (Z * TimeList.Count) / (S * WeightSum);
 
             return GlobalMoranI;
         }
@@ -689,8 +694,9 @@ namespace MapAssign.PuTools
         /// <param name="T">周期</param>
         /// <param name="w1">周期内权重</param>
         /// <param name="w2">周期外</param>
+        /// selfLabel=true，权重计算考虑自身；selfLable=false，权重计算不考虑自身
         /// <returns></returns>
-        public List<double> GetGasuWeigthConsiderT(List<Double> ValueList, int TimeIndex,int T,double w1,double w2)
+        public List<double> GetGasuWeigthConsiderT(List<Double> ValueList, int TimeIndex,int T,double w1,double w2,bool selfLabel)
         {
             List<double> TimeWeight = new List<double>();
 
@@ -712,7 +718,7 @@ namespace MapAssign.PuTools
                         TimeWeight.Add(0.0456 * w1);
                     }
                     else
-                    {
+                    {                    
                         if (Math.Abs(i - TimeIndex) >= T && Math.Abs(i - TimeIndex) % T == 0)
                         {
                             int D = Math.Abs(i - TimeIndex) / T;
@@ -737,7 +743,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -792,7 +814,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -850,7 +888,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -900,7 +954,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -954,7 +1024,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -1012,7 +1098,23 @@ namespace MapAssign.PuTools
 
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                 }
@@ -1056,7 +1158,23 @@ namespace MapAssign.PuTools
                         }
                         else
                         {
-                            TimeWeight.Add(0);
+                            if (selfLabel)
+                            {
+                                if (i == TimeIndex)
+                                {
+                                    TimeWeight.Add(0.5);
+                                }
+
+                                else
+                                {
+                                    TimeWeight.Add(0);
+                                }
+                            }
+
+                            else
+                            {
+                                TimeWeight.Add(0);
+                            }
                         }
                     }
                     #endregion

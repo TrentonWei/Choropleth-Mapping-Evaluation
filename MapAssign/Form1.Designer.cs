@@ -55,6 +55,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axTOCControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
@@ -122,6 +123,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -141,11 +143,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(205, 602);
+            this.button4.Location = new System.Drawing.Point(132, 602);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 39);
+            this.button4.Size = new System.Drawing.Size(148, 39);
             this.button4.TabIndex = 24;
-            this.button4.Text = "Ok";
+            this.button4.Text = "Evaluation";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -317,6 +319,16 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(99, 647);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(181, 39);
+            this.button5.TabIndex = 25;
+            this.button5.Text = "GetTimeSeries";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -374,6 +386,7 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
 
     }
 }

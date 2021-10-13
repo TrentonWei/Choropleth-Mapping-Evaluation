@@ -299,6 +299,36 @@ namespace MapAssign
         }
 
         /// <summary>
+        /// Get the Polygons
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public Dictionary<string, IFeature> GetNameFeature(String MatchName)
+        {
+            Dictionary<string, IFeature> NameFeature = new Dictionary<string, IFeature>();
+
+            #region MainProcess
+            string s1 = comboBox1.Text;
+            IFeatureClass LayerFeatureClass = function.GetFeatureClass(axMapControl1.Map, s1);
+
+            for (int i = 0; i < LayerFeatureClass.FeatureCount(null); i++)
+            {
+                IFeature pFeature = LayerFeatureClass.GetFeature(i);
+                IFields pFields = pFeature.Fields;
+                int field1 = pFields.FindField(MatchName);
+                String NameValue = Convert.ToString(pFeature.get_Value(field1));
+
+                if (!NameFeature.ContainsKey(NameValue))
+                {
+                    NameFeature.Add(NameValue, pFeature);
+                }
+            }
+            #endregion
+
+            return NameFeature;
+        }
+
+        /// <summary>
         /// 获取每个Name对应下的TimeValues
         /// </summary>
         /// <param name="Name"></param>
@@ -379,7 +409,7 @@ namespace MapAssign
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
-        {
+        {         
             Dictionary<string, IPolygon> NamePolygon = this.GetNamePolygon(this.comboBox3.Text.ToString());//Polygons
             Dictionary<string, List<double>> NameTimeSeries=this.GetNameTimeSeries(this.comboBox5.Text.ToString(),this.comboBox6.Text.ToString());//TimeValues
 
@@ -408,7 +438,7 @@ namespace MapAssign
                 double ClassEntroy = EP.ClassEntroy(TargetTimeValueSeries[i].Values.ToList(), 2);
                 double MetricEntroy = EP.MapMetricEntroy1(TargetTimeValueSeries[i],2);
                 double ThematicEntroy = EP.MapThematicEntroy(TargetTimeValueSeries[i], 2) / TargetTimeValueSeries[i].Values.Count;
-                double MixEntroy = ClassEntroy * 0.4 + MetricEntroy * 0.4 + ThematicEntroy * 0.2;
+                double MixEntroy = ClassEntroy * 0.3 + MetricEntroy * 0.3 + ThematicEntroy * 0.4;
 
                 ClassEntroyDic.Add(i,ClassEntroy);
                 MetricEntroyDic.Add(i,MetricEntroy);
@@ -418,15 +448,15 @@ namespace MapAssign
             #endregion
 
             #region 计算信息量的稳定性
-            double ClassEntroyChange = EP.GlobalTimeMoranI(ClassEntroyDic, 3, 12, 0.9, 0.1);
-            double MetricEntroyChange = EP.GlobalTimeMoranI(MetricEntroyDic, 3, 12, 0.9, 0.1);
-            double ThematicEntroyChange = EP.GlobalTimeMoranI(ThematicEntroyDic, 3, 12, 0.9, 0.1);
-            double MixEntroyChange = EP.GlobalTimeMoranI(MixEntroyDic, 3, 12, 0.9, 0.1);
+            double ClassEntroyChange = EP.GlobalTimeMoranI(ClassEntroyDic, 3, 12, 0.9, 0.1,true);
+            double MetricEntroyChange = EP.GlobalTimeMoranI(MetricEntroyDic, 3, 12, 0.9, 0.1,true);
+            double ThematicEntroyChange = EP.GlobalTimeMoranI(ThematicEntroyDic, 3, 12, 0.9, 0.1,true);
+            double MixEntroyChange = EP.GlobalTimeMoranI(MixEntroyDic, 3, 12, 0.9, 0.1,true);
 
-            List<double> LocalClassEntroyChange = EP.TimeLocalMoranIList(ClassEntroyDic, 3, 12, 0.9, 0.1);
-            List<double> LocalMetricEntroyChange = EP.TimeLocalMoranIList(MetricEntroyDic, 3, 12, 0.9, 0.1);
-            List<double> LocalThematicEntroyChange = EP.TimeLocalMoranIList(ThematicEntroyDic, 3, 12, 0.9, 0.1);
-            List<double> LocalMixEntroyChange = EP.TimeLocalMoranIList(MixEntroyDic, 3, 12, 0.9, 0.1);
+            List<double> LocalClassEntroyChange = EP.TimeLocalMoranIList(ClassEntroyDic, 3, 12, 0.9, 0.1,true);
+            List<double> LocalMetricEntroyChange = EP.TimeLocalMoranIList(MetricEntroyDic, 3, 12, 0.9, 0.1,true);
+            List<double> LocalThematicEntroyChange = EP.TimeLocalMoranIList(ThematicEntroyDic, 3, 12, 0.9, 0.1,true);
+            List<double> LocalMixEntroyChange = EP.TimeLocalMoranIList(MixEntroyDic, 3, 12, 0.9, 0.1,true);
             #endregion
 
             #region OutPut
@@ -495,6 +525,44 @@ namespace MapAssign
             sw.Close();
             fs.Close();
             #endregion 
+        }
+
+        /// <summary>
+        /// Get time series value
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            IFeatureClass FeatureClass = function.GetFeatureClass(axMapControl1.Map, this.comboBox1.Text);
+            Dictionary<string, IPolygon> NamePolygon = this.GetNamePolygon(this.comboBox3.Text.ToString());//Polygons
+            Dictionary<string, List<double>> NameTimeSeries = this.GetNameTimeSeries(this.comboBox5.Text.ToString(), this.comboBox6.Text.ToString());//TimeValues
+
+            for (int i = 0; i < NameTimeSeries.First().Value.Count; i++)
+            {
+                function.AddField(FeatureClass, "Time_" + i.ToString(), esriFieldType.esriFieldTypeDouble);
+            }
+
+            #region 获取每一个时刻的分级信息
+            IFeatureCursor pFeatureCursor = FeatureClass.Update(null, false);
+            IFeature pFeature = pFeatureCursor.NextFeature();
+
+            while (pFeature != null)
+            {
+                IFields pFields = pFeature.Fields;
+                int field1 = pFields.FindField(this.comboBox3.Text.ToString());
+                String NameValue = Convert.ToString(pFeature.get_Value(field1));
+
+                List<double> Values = NameTimeSeries[NameValue];
+                for (int i = 0; i < Values.Count; i++)
+                {
+                    function.DataStore(FeatureClass, pFeature, "Time_" + i.ToString(), Values[i]);
+                }
+
+                pFeatureCursor.UpdateFeature(pFeature);
+                pFeature = pFeatureCursor.NextFeature();
+            }
+            #endregion
         }
     }
 }

@@ -161,9 +161,6 @@ C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.e
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.pdb
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.csprojResolveAssemblyReference.cache
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.Form1.resources
-C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapAssignbyNumberForm.resources
-C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.MapClip.resources
-C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.MapAssignfrms.SingleAreaAssignForm.resources
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.Properties.Resources.resources
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\obj\x86\Debug\MapAssign.csproj.GenerateResource.Cache
 C:\WorkFiles\06 代码集合\ClassEvaluation\MapAssign\bin\Debug\MapAssign.exe
